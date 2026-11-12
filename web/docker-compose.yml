@@ -1,0 +1,11 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: myweb
+    restart: always
+    ports:
+      # 只绑定本地回环：公网流量必须经过宿主机 Nginx 反向代理
+      - "127.0.0.1:8080:80"
+    volumes:
+      # 只读挂载，容器无法修改宿主机文件
+      - ./html:/usr/share/nginx/html:ro

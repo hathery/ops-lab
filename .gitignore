@@ -1,0 +1,11 @@
+# 备份产物
+*.tar.gz
+*.log
+
+# 环境变量（可能含密钥）
+.env
+.env.*
+
+# 系统文件
+.DS_Store
+Thumbs.db
